@@ -11,9 +11,10 @@ your environment.
 
 ### Installing
 
-1. Copy the scripts into a directory that is readable by the MythTV user.
-2. In your MythTV setup, create a user job that points to the mythpostprocess.sh script, with the command line arguments of "%CHANID%" "%STARTTIMEUTC%". It should look something like this:
+1. Copy the scripts into a directory that is readable by the MythTV user. (e.g. "/home/mythtv/mythplex/")
+2. Modify the file "mythpostprocess.sh" to reflect your configuration.
 
-/path/to/scripts/mythpostprocess.sh "%CHANID%" "%STARTTIMEUTC%"
+    At minimum, this entails setting the directories for your TV and Movie folders for your Plex library configuration.
+3. In your MythTV setup, create a user job that points to the mythpostprocess.sh script, with the command line arguments of "%CHANID%" "%STARTTIMEUTC%". It should look something like this:
 
-3. Test.
+/home/mythtv/mythplex/mythpostprocess.sh "%CHANID%" "%STARTTIMEUTC%"
